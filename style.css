@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #DAE4E5;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.title-main {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 20px;
+    width: 440px;
+    margin: 0 auto;
+}
+
+.preview-cart {
+    width: 440px;
+    margin: 0 auto;
+}
+
+.product-el {
+    /* background-color: #555; */
+    background-color: #4A586E;
+    border-radius: 10px;
+    width: 200px;
+    height: auto;
+    /* height: 260px; */
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.product-el img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.product-el h6 {
+    font-size: 16px;
+    padding: 10px 0;
+    font-weight: 500;
+}
+
+.btn {
+    width: 100%;
+    /* height: 30px; */
+    padding: 10px 0;
+    /* background-color: rgb(29, 76, 90); */
+    background-color: #1A2026;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-plus {
+    width: 30%;
+    /* background-color: rgb(29, 76, 90); */
+    background-color: #7AB1FF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-minus {
+    width: 30%;
+    /* background-color: rgb(90, 38, 29); */
+    background-color: #FF905A;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-count {
+    width: 30%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.configurate-count {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+#alert_info {
+    background-color: #FF905A;
+    text-align: center;
+    padding: 25px 10px;
+    position: absolute;
+    width: 100%;
+    display: none;
+    /* height: 50px; */
+}
+
+#alert_info p {
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+}
+
+#screen_1 {
+    /* display: none; */
+}
+
+#screen_2 {
+    display: none;
+}
+
+.detail-pay {
+    width: 440px;
+    margin: 0 auto;
+}
+
+.detail-pay h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.detail-pay input {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    height: 38px;
+    width: 100%;
+}
+
+.screen-3 {
+    margin: 0 auto;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    border: solid 1px darkgray;
+    padding: 20px;
+}
+
+th {
+    font-weight: 600px;
+    border-bottom: 1px solid #6678b1;
+    padding: 8px 2px;
+    font-size: 20px;
+}
+
+td {
+    padding: 12px 2px;
+}
+
+span {
+    background-color: #7AB1FF;
+    padding: 8px;
+}
+
+.btn-screen-3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.btn-1 {
+    border: solid 1px darkgray;
+    width: 10%;
+    cursor: pointer;
+    height: 45px;
+    text-align: center;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+.btn-2 {
+    border: solid 1px darkgray;
+    width: 20%;
+    cursor: pointer;
+    height: 45px;
+    text-align: center;
+    padding: 15px;
+    background-color: #7AB1FF;
+}
+
+.btn-2:hover {
+    border: solid 1px red;
+}
+
+.screen-3 {
+    display: none;
+}
+
+.input_form {
+    color: red;
+    display: none;
+}

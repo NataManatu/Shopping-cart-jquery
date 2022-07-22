@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="alert_info">
+        <p></p>
+    </div>
+
+    <h1 class="title-main">Спортивное питание</h1>
+
+    <div id="screen_1">
+        <h1>Список товаров</h1>
+
+        <!-- <button id="btn-test">Show/Hide Alert</button> -->
+
+        <div class="product-gallery">
+            <div class="product-el">
+                <h4>Product 1</h4>
+                <img src="https://avatars.mds.yandex.net/get-altay/4234257/2a00000179487450016b940fced1ba953a30/XXL" alt="">
+                <h6>400 ₽</h6>
+                <div class="configurate-count">
+                    <div class="btn-minus">-</div>
+                    <input type="text" class="input-count" value="0">
+                    <div class="btn-plus">+</div>
+                </div>
+                <div class="btn add-to-cart">Добавить в корзину</div>
+            </div>
+
+            <div class="product-el">
+                <h4>Product 2</h4>
+                <img src="https://avatars.mds.yandex.net/get-altay/4398559/2a000001794873ec242980b0fa7b544fbc29/XXL" alt="">
+                <h6>700 ₽</h6>
+                <div class="configurate-count">
+                    <div class="btn-minus">-</div>
+                    <input type="text" class="input-count" value="0">
+                    <div class="btn-plus">+</div>
+                </div>
+                <div class="btn add-to-cart">Добавить в корзину</div>
+            </div>
+
+            <div class="product-el">
+                <h4>Product 3</h4>
+                <img src="https://petimer.ru/upload/iblock/f01/f01c304a829027dc0343f767ee8f48ec.jpg" alt="">
+                <h6>500 ₽</h6>
+                <div class="configurate-count">
+                    <div class="btn-minus">-</div>
+                    <input type="text" class="input-count" value="0">
+                    <div class="btn-plus">+</div>
+                </div>
+                <div class="btn add-to-cart">Добавить в корзину</div>
+            </div>
+
+            <div class="product-el">
+                <h4>Product 4</h4>
+                <img src="https://gosport.shop/upload/goods_offer/e1a/e1a7860b89823bf273110970d109e529.jpg" alt="">
+                <h6>400 ₽</h6>
+                <div class="configurate-count">
+                    <div class="btn-minus">-</div>
+                    <input type="text" class="input-count" value="0">
+                    <div class="btn-plus">+</div>
+                </div>
+                <div class="btn add-to-cart">Добавить в корзину</div>
+                <!-- <div class="btn add-to-cart"> -->
+
+            </div>
+        </div>
+
+
+        <h1>Корзина</h1>
+        <div class="preview-cart">
+            <h2>У вас в корзине <b id="prev-count">0</b> товаров на сумму <b id="prev-price">0</b> рублей</h2>
+            <div class="btn" id="goto_screen_2">Перейти к оформлению заказа</div>
+        </div>
+    </div>
+
+    <div id="screen_2">
+        <h1>Оформление заказа</h1>
+        <div class="detail-pay">
+            <h3>ФИО</h3>
+            <input id="input_fio" type="text" placeholder="Иванов Иван Иванович">
+            <p class="input_form">*Обязательное поле для заполнения</p>
+            <br>
+            <h3>Email</h3>
+            <input id="input_email" type="email" placeholder="test@mail.com">
+            <p class="input_form">*Обязательное поле для заполнения</p>
+            <br>
+            <h3>Номер телефона</h3>
+            <input id="input_tel" type="tel" placeholder="+71234567890">
+            <p class="input_form">*Обязательное поле для заполнения</p>
+            <br>
+            <h3>Адрес доставки</h3>
+            <input id="input_adress" type="text" placeholder="г. Сочи, ул. Чехова 20">
+            <p class="input_form">*Обязательное поле для заполнения</p>
+            <br>
+            <div class="btn" id="goto_screen_1">Назад</div>
+            <div class="btn" id="goto_screen_3">Далее</div>
+
+        </div>
+    </div>
+
+
+    <div class="screen-3" id="screen_3">
+
+        <h1>Подтверждение заказа</h1>
+
+        <table id="table_product">
+            <tr>
+                <th>Фото</th>
+                <th>Hазвание товара</th>
+                <th>Кол-во</th>
+                <th>Стоимость</th>
+            </tr>
+
+            <!-- <tr>
+                <td><img src="" alt="фото"></td>
+                <td>Название товара</td>
+                <td>1 шт</td>
+                <td>1000P</td>
+            </tr> -->
+            <!-- <tr>
+                <td>Адрес доставки</td>
+                <td>Доставка Почта РФ(По России в целом в пределах)</td>
+                <td></td>
+                <td>300 P</td>
+            </tr>
+            <tr>
+                <td>Итого:</td>
+                <td></td>
+                <td></td>
+                <td> <span>1300 P</span>
+                </td>
+            </tr> -->
+
+        </table>
+
+        <h1>Контактные данные</h1>
+
+        <table>
+            <tr>
+                <td>Контактное лицо</td>
+                <td id="fio"></td>
+
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td id="email"></td>
+
+            </tr>
+            <tr>
+                <td>Телефон для связи</td>
+                <td id="tel"></td>
+
+            </tr>
+            <tr>
+                <td>Адрес доставки</td>
+                <td id="adress"></td>
+
+            </tr>
+
+        </table>
+        <div class="btn-screen-3">
+            <div class="btn-1" id="">Назад</div>
+            <div class="btn-2" id="">Оформить заказ</div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script src="script.js">
+</script>
