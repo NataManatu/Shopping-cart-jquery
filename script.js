@@ -17,10 +17,10 @@ let userObj = {
 
 
 // Add to Cart
-$(document).on("click", ".add-to-cart", function() {
+$(document).on("click", ".add-to-cart", function () {
     let nowItemName = $(this).parent().children("h4").text()
     let nowItemPrice = $(this).parent().children("h6").text()
-        // Добавляем новую переменную для хранения текущей картинки
+    // Добавляем новую переменную для хранения текущей картинки
     let nowItemImg = $(this).parent().children("img").attr("src")
 
 
@@ -59,7 +59,7 @@ $(document).on("click", ".add-to-cart", function() {
         let countNow = 0
         let sumPriceNow = 0
 
-        $.each(cartObj, function(indexInArray, valueOfElement) {
+        $.each(cartObj, function (indexInArray, valueOfElement) {
             countNow += valueOfElement["count"]
 
             sumPriceNow += (valueOfElement["count"] * valueOfElement["price"])
@@ -70,12 +70,12 @@ $(document).on("click", ".add-to-cart", function() {
     }
 });
 // Btn PLUS
-$(document).on("click", ".btn-plus", function() {
+$(document).on("click", ".btn-plus", function () {
     let nowNum = $(this).parent().children("input").val()
     $(this).parent().children("input").val(Number(nowNum) + 1)
 });
 // Btn MINUS
-$(document).on("click", ".btn-minus", function() {
+$(document).on("click", ".btn-minus", function () {
     let nowNum = $(this).parent().children("input").val()
     if (Number(nowNum) != 0) {
         $(this).parent().children("input").val(Number(nowNum) - 1)
@@ -83,7 +83,7 @@ $(document).on("click", ".btn-minus", function() {
 });
 
 
-$(document).on("click", "#goto_screen_2", function() {
+$(document).on("click", "#goto_screen_2", function () {
     let countInCart = Object.keys(cartObj).length
     if (countInCart != 0) {
         $("#screen_1").hide("slide")
@@ -100,7 +100,7 @@ $(document).on("click", "#goto_screen_2", function() {
 
 });
 
-$(document).on("click", "#goto_screen_1", function() {
+$(document).on("click", "#goto_screen_1", function () {
     $("#screen_2").hide("slide")
     $("#screen_1").show("slide")
 })
@@ -108,7 +108,7 @@ $(document).on("click", "#goto_screen_1", function() {
 
 
 
-$(document).on("click", "#goto_screen_3", function() {
+$(document).on("click", "#goto_screen_3", function () {
     // alert("mm")
     userObj["fio"] = $("#input_fio").val()
     userObj["email"] = $("#input_email").val()
@@ -120,8 +120,8 @@ $(document).on("click", "#goto_screen_3", function() {
 
     // Скрываем все ошибки
     $(".input_form").hide()
-        // Перебираем все инпуты формы
-    $.each($(".detail-pay").children("input"), function(indexInArray, valueOfElement) {
+    // Перебираем все инпуты формы
+    $.each($(".detail-pay").children("input"), function (indexInArray, valueOfElement) {
         // Проверяем пустой ли инпут
         if ($(valueOfElement).val() === "") {
             // Если инпут пустой, то делаем ошибку видимой
@@ -139,12 +139,12 @@ $(document).on("click", "#goto_screen_3", function() {
         $("#screen_3").show("slide")
 
         // console.log(cartObj)
-        $.each(cartObj, function(indexInArray, valueOfElement) {
+        $.each(cartObj, function (indexInArray, valueOfElement) {
             // console.log()
             let htmlBlock = `
             <tr>
                
-                <td>` + valueOfElement["img"] + `</td>
+            <td><img src="" alt="фото"></td>
                 <td>` + valueOfElement["name"] + `</td>
                 <td>` + valueOfElement["count"] + ` шт</td>
                 <td>` + valueOfElement["price"] + `P</td>
@@ -164,7 +164,7 @@ $(document).on("click", "#goto_screen_3", function() {
 
 })
 
-$(document).on("click", ".btn-1", function() {
+$(document).on("click", ".btn-1", function () {
     // alert("vv")
     $("#screen_3").hide("slide")
     $("#screen_2").show("slide")
