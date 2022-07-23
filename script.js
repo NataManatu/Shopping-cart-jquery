@@ -144,7 +144,7 @@ $(document).on("click", "#goto_screen_3", function () {
             let htmlBlock = `
             <tr>
                
-            <td><img src="" alt="фото"></td>
+            <td><img src="` + valueOfElement["img"] + `" alt="" height="100" width="100"></td>
                 <td>` + valueOfElement["name"] + `</td>
                 <td>` + valueOfElement["count"] + ` шт</td>
                 <td>` + valueOfElement["price"] + `P</td>
