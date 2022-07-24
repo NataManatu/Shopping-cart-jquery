@@ -68,6 +68,10 @@ $(document).on("click", ".add-to-cart", function () {
         $("#prev-count").text(countNow)
         $("#prev-price").text(sumPriceNow)
     }
+
+
+
+
 });
 // Btn PLUS
 $(document).on("click", ".btn-plus", function () {
@@ -75,7 +79,7 @@ $(document).on("click", ".btn-plus", function () {
     $(this).parent().children("input").val(Number(nowNum) + 1)
 });
 // Btn MINUS
-$(document).on("click", ".btn-minus", function () {
+$(".btn-minus").on("click",  function () {
     let nowNum = $(this).parent().children("input").val()
     if (Number(nowNum) != 0) {
         $(this).parent().children("input").val(Number(nowNum) - 1)
@@ -152,8 +156,13 @@ $(document).on("click", "#goto_screen_3", function () {
             </tr>
             `
             $("#table_product").append(htmlBlock)
+           
         });
     }
+
+
+
+
 
 
     $("#fio").text($("#input_fio").val())
