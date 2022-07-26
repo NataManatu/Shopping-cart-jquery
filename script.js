@@ -23,9 +23,9 @@ $(document).on("click", ".add-to-cart", function () {
     // Добавляем новую переменную для хранения текущей картинки
     let nowItemImg = $(this).parent().children("img").attr("src")
     let nowNum = $(this).parent().children(".configurate-count").children("input").val()
-    let summProduct = $(this).parent().children("#table_product").val()
+   
     nowNum = Number(nowNum)
-
+    
     // Ошибка при добавлении в корзину 
     if (nowNum == 0) {
         // console.log($("#alert_info").children("p").text())
@@ -48,7 +48,7 @@ $(document).on("click", ".add-to-cart", function () {
                 price: nowItemPrice,
                 count: nowNum,
                 img: nowItemImg,
-                summ: summProduct
+               
 
 
             }
