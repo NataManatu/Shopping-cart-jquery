@@ -151,26 +151,23 @@ $(document).on("click", "#goto_screen_3", function () {
             <tr>
                
             <td><img src="` + valueOfElement["img"] + `" alt="" height="100" width="100"></td>
-                <td id="pr">` + valueOfElement["name"] + `</td>
+                <td>` + valueOfElement["name"] + `</td>
               <td>` + valueOfElement["count"] + ` шт</td>
                 <td>` + valueOfElement["price"] * valueOfElement["count"] + `P</td>   
             </tr>
        
             `
-
             $("#table_product").append(htmlBlock)
-            // if (cartObj["name"].includes(nowItemName)===true) {
-            //     valueOfElement["count"] +=valueOfElement["count"]
-            // }
+            alert(valueOfElement["name"])
+          
+          
+
+
+
 
 
         });
     }
-
-
-
-
-
 
     $("#fio").text($("#input_fio").val())
     $("#email").text($("#input_email").val())
