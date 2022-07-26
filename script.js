@@ -23,9 +23,9 @@ $(document).on("click", ".add-to-cart", function () {
     // Добавляем новую переменную для хранения текущей картинки
     let nowItemImg = $(this).parent().children("img").attr("src")
     let nowNum = $(this).parent().children(".configurate-count").children("input").val()
-   
+
     nowNum = Number(nowNum)
-    
+
     // Ошибка при добавлении в корзину 
     if (nowNum == 0) {
         // console.log($("#alert_info").children("p").text())
@@ -48,7 +48,7 @@ $(document).on("click", ".add-to-cart", function () {
                 price: nowItemPrice,
                 count: nowNum,
                 img: nowItemImg,
-               
+
 
 
             }
@@ -151,15 +151,20 @@ $(document).on("click", "#goto_screen_3", function () {
             <tr>
                
             <td><img src="` + valueOfElement["img"] + `" alt="" height="100" width="100"></td>
-                <td>` + valueOfElement["name"] + `</td>
-                <td>` + valueOfElement["count"] + ` шт</td>
+                <td id="pr">` + valueOfElement["name"] + `</td>
+              <td>` + valueOfElement["count"] + ` шт</td>
                 <td>` + valueOfElement["price"] * valueOfElement["count"] + `P</td>
-                <td>` + + ` P</td>
                 
                 
             </tr>
+           
+                
             `
             $("#table_product").append(htmlBlock)
+            // if (cartObj["name"].includes(nowItemName)===true) {
+            //     valueOfElement["count"] +=valueOfElement["count"]
+            // }
+            
 
         });
     }
