@@ -22,9 +22,8 @@ $(document).on("click", ".add-to-cart", function () {
     let nowItemPrice = $(this).parent().children("h6").text()
     // Добавляем новую переменную для хранения текущей картинки
     let nowItemImg = $(this).parent().children("img").attr("src")
-
-
     let nowNum = $(this).parent().children(".configurate-count").children("input").val()
+    let summProduct = $(this).parent().children("#table_product").val()
     nowNum = Number(nowNum)
 
     // Ошибка при добавлении в корзину 
@@ -49,6 +48,9 @@ $(document).on("click", ".add-to-cart", function () {
                 price: nowItemPrice,
                 count: nowNum,
                 img: nowItemImg,
+                summ: summProduct
+
+
             }
         } else {
             cartObj[nowItemName]["count"] += 1
@@ -79,7 +81,7 @@ $(document).on("click", ".btn-plus", function () {
     $(this).parent().children("input").val(Number(nowNum) + 1)
 });
 // Btn MINUS
-$(".btn-minus").on("click",  function () {
+$(".btn-minus").on("click", function () {
     let nowNum = $(this).parent().children("input").val()
     if (Number(nowNum) != 0) {
         $(this).parent().children("input").val(Number(nowNum) - 1)
@@ -151,12 +153,14 @@ $(document).on("click", "#goto_screen_3", function () {
             <td><img src="` + valueOfElement["img"] + `" alt="" height="100" width="100"></td>
                 <td>` + valueOfElement["name"] + `</td>
                 <td>` + valueOfElement["count"] + ` шт</td>
-                <td>` + valueOfElement["price"] + `P</td>
+                <td>` + valueOfElement["price"] * valueOfElement["count"] + `P</td>
+                <td>` + + ` P</td>
+                
                 
             </tr>
             `
             $("#table_product").append(htmlBlock)
-           
+
         });
     }
 
