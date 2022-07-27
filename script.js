@@ -159,6 +159,7 @@ $(document).on("click", "#goto_screen_3", function () {
             `
             $("#table_product").append(htmlBlock)
             alert(valueOfElement["name"])
+            
           
           
 
