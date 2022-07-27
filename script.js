@@ -145,28 +145,22 @@ $(document).on("click", "#goto_screen_3", function () {
         $("#screen_3").show("slide")
 
         // console.log(cartObj)
+        $("#table_product").html("")
+        let totalPrice = 0
         $.each(cartObj, function (indexInArray, valueOfElement) {
             // console.log()
             let htmlBlock = `
-            <tr>
-               
+            <tr>  
             <td><img src="` + valueOfElement["img"] + `" alt="" height="100" width="100"></td>
                 <td>` + valueOfElement["name"] + `</td>
               <td>` + valueOfElement["count"] + ` шт</td>
-                <td>` + valueOfElement["price"] * valueOfElement["count"] + `P</td>   
-            </tr>
-       
+             <td>` + valueOfElement["price"] + `P</td>   
             `
+            totalPrice += valueOfElement["price"] * valueOfElement["count"]
             $("#table_product").append(htmlBlock)
-            alert(valueOfElement["name"])
+            $("#summProdukt").val()
             
-          
-          
-
-
-
-
-
+           
         });
     }
 
