@@ -151,17 +151,19 @@ $(document).on("click", "#goto_screen_3", function () {
             // console.log()
             let htmlBlock = `
             <tr>  
-            <td><img src="` + valueOfElement["img"] + `" alt="" height="100" width="100"></td>
+            <td><img src="` + valueOfElement["img"] + `" alt="" height="120" width="130"></td>
                 <td>` + valueOfElement["name"] + `</td>
               <td>` + valueOfElement["count"] + ` шт</td>
              <td>` + valueOfElement["price"] * valueOfElement["count"] + `P</td>   
             `
             totalPrice += valueOfElement["price"] * valueOfElement["count"]
             $("#table_product").append(htmlBlock)
-            $("#summProdukt").val(totalPrice).val()
-           
+            $("#summProdukt").val(totalPrice.val)
         });
+
     }
+
+
 
     $("#fio").text($("#input_fio").val())
     $("#email").text($("#input_email").val())
