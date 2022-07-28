@@ -158,9 +158,8 @@ $(document).on("click", "#goto_screen_3", function () {
             `
             totalPrice += valueOfElement["price"] * valueOfElement["count"]
             $("#table_product").append(htmlBlock)
-            $("#summProdukt").val()
-
-
+            $("#summProdukt").val(totalPrice).val()
+           
         });
     }
 
