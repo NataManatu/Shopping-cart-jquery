@@ -1,10 +1,4 @@
-// $("#btn-test").click(function(e) {
-//     $("#alert_info").toggle()
-
-// });
-
-
-
+s
 let cartObj = {}
 let userObj = {
     fio: "",
@@ -12,8 +6,6 @@ let userObj = {
     tel_number: "",
     adress: ""
 }
-
-// let fotoObj = {}
 
 
 // Add to Cart
@@ -48,10 +40,8 @@ $(document).on("click", ".add-to-cart", function () {
                 price: nowItemPrice,
                 count: nowNum,
                 img: nowItemImg,
-
-
-
             }
+
         } else {
             cartObj[nowItemName]["count"] += 1
         }
@@ -70,8 +60,6 @@ $(document).on("click", ".add-to-cart", function () {
         $("#prev-count").text(countNow)
         $("#prev-price").text(sumPriceNow)
     }
-
-
 
 
 });
@@ -110,7 +98,6 @@ $(document).on("click", "#goto_screen_1", function () {
     $("#screen_2").hide("slide")
     $("#screen_1").show("slide")
 })
-
 
 
 
