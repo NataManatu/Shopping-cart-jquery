@@ -1,4 +1,4 @@
-s
+
 let cartObj = {}
 let userObj = {
     fio: "",
